@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "scope": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User1_cogonzalez/providers/Microsoft.ApiManagement/service/APIM-COGONZALEZ/products/starter",
+    "allowTracing": false,
+    "ownerId": "/subscriptions/a7fbff9d-456b-4e54-b0ae-e02269c684e7/resourceGroups/RG-Temporal_Taller_APIM_User1_cogonzalez/providers/Microsoft.ApiManagement/service/APIM-COGONZALEZ/users/1",
+    "state": "active"
+  }
+}

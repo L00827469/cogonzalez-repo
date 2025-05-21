@@ -1,0 +1,19 @@
+<policies>
+	<inbound>
+		<base />
+		<set-backend-service base-url="http://echoapi.cloudapp.net/api" />
+	</inbound>
+	<backend>
+		<base />
+	</backend>
+	<outbound>
+		<base />
+		<set-header name="X-My-Sample" exists-action="override">
+			<value>This is a sample</value>
+		</set-header>
+		<jsonp callback-parameter-name="ProcessResponse" />
+	</outbound>
+	<on-error>
+		<base />
+	</on-error>
+</policies>
