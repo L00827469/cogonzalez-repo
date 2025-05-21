@@ -9,6 +9,7 @@ paths:
   /get:
     get:
       summary: FetchData
+      description: FetchData
       operationId: fetchdata
       responses:
         '200':
