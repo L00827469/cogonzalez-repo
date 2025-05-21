@@ -8,12 +8,6 @@
 	<!-- Throttle, authorize, validate, cache, or transform the requests -->
 	<inbound>
 		<base />
-		<validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid.">
-			<openid-config url="https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration" />
-			<audiences>
-				<audience>87b9d3a8-627b-4514-b4c8-28d4cb9c7ab6</audience>
-			</audiences>
-		</validate-jwt>
 	</inbound>
 	<!-- Control if and how the requests are forwarded to services  -->
 	<backend>

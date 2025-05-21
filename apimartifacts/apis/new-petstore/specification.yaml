@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Swagger Petstore - OpenAPI 3.0
+  title: New Petstore
   description: "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\n\nSome useful links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)"
   termsOfService: https://swagger.io/terms/
   contact:
@@ -10,7 +10,7 @@ info:
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   version: '1.0'
 servers:
-  - url: https://apim-cogonzalez.azure-api.net/petstore
+  - url: https://apim-cogonzalez.azure-api.net/newst
 paths:
   /pet:
     put:
@@ -177,16 +177,6 @@ paths:
           description: Validation exception
         '500':
           description: Unexpected error
-    get:
-      summary: Get Pet
-      description: Mock policy
-      operationId: get-pet
-      responses:
-        '200':
-          description: Respuesta Mock Policy
-          content:
-            application/vnd.api+json:
-              example: "{\r\n    \"jsonapi\": {\r\n        \"version\": \"2.0\"\r\n    },\r\n    \"links\": {\r\n        \"self\": \"/pets/Newcomer\"\r\n    },\r\n    \"data\": {\r\n\t\t\"type\": \"pets\",\r\n\t\t\"id\": \"100\"\r\n\t\t\"attributes\": {\r\n\t\t\t\"nombre\": \"Newcomer\"\r\n\t\t}\r\n    }\r\n}"
   /pet/findByStatus:
     get:
       tags:
@@ -429,7 +419,9 @@ paths:
             schema:
               type: string
               format: binary
-            example: ''
+            examples:
+              default:
+                value: 
       responses:
         '200':
           description: successful operation
@@ -900,14 +892,6 @@ paths:
           description: User not found
         '500':
           description: Unexpected error
-  /integers:
-    get:
-      summary: Add two integers
-      description: Add two integers
-      operationId: add-two-integers
-      responses:
-        '200':
-          description: ''
 components:
   schemas:
     Order:
